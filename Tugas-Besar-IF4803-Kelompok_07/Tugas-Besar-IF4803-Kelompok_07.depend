@@ -1,7 +1,11 @@
 # depslib dependency file v1.0
-1763815274 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400169.cpp
+1765116076 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400169.cpp
+	<iostream>
+	"header.h"
 
-1763815318 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400384.cpp
+1765111338 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400384.cpp
+	<iostream>
+	"header.h"
 
 1743445502 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main.cpp
 	<iostream>
@@ -10,7 +14,22 @@
 
 1763815466 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main_user.cpp
 
-1763815382 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400169.cpp
+1765116109 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400169.cpp
+	<iostream>
+	"header.h"
 
-1763815408 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400384.cpp
+1765111340 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400384.cpp
+	<iostream>
+	"header.h"
+
+1764993832 d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi.h
+	"Pegawai.h"
+	<string>
+
+1765107927 d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai.h
+	<string>
+
+1765116059 d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\header.h
+	<iostream>
+	<string>
 
