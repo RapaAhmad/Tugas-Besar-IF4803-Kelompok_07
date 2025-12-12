@@ -3,6 +3,7 @@
 using namespace std;
 
 void deleteFirstPegawai(adrDivisi &P, adrPegawai &Q) {
+    Q = P->firstChild;
     if (P->firstChild == nullptr){
         cout<<"list pegawai kosong" ;
     }else if (Q ->next == nullptr){
@@ -11,7 +12,7 @@ void deleteFirstPegawai(adrDivisi &P, adrPegawai &Q) {
         Q ->prev = nullptr;
     }else {
         P ->firstChild = Q ->next ;
-        Q ->next ->prev == nullptr ;
+        Q ->next ->prev = nullptr ;
         Q ->next = nullptr ;
         Q ->prev = nullptr ;
     }
@@ -20,7 +21,7 @@ void deleteLastPegawai(adrDivisi &P, adrPegawai &Q){
     if (P->firstChild == nullptr){
         cout<<"list pegawai kosong" ;
     }else if (Q ->next == nullptr){
-        P->firstChild= nullptr;
+        P->firstChild = nullptr;
         Q ->next = nullptr;
         Q ->prev = nullptr;
     }else {
@@ -51,33 +52,32 @@ void deleteAfterPegawai(adrPegawai Prec, adrPegawai &Q){
         Q ->prev = nullptr ;
     }
 }
-adrPegawai searchPegawai(adrDivisi P, string nama, string NIK){
+adrPegawai searchPegawai(adrDivisi P,  string NIK){
     adrPegawai  q ;
-    if(P ->firstChild == nullptr ||!( P ->firstChild->infoC.namaPegawai == nama && P ->firstChild->infoC.NIK == NIK)   ){
-        cout<<"List pegawai kosong" ;
-    }else if ( P ->firstChild->infoC.namaPegawai == nama && P ->firstChild->infoC.NIK == NIK) {
-
+    if(P ->firstChild == nullptr){
         return nullptr ;
-    }else {
-
+    } else {
         q = P ->firstChild ;
-        while (q ->next != nullptr && (q ->infoC.namaPegawai == nama && q ->infoC.NIK == NIK)){
+        while (q ->next != nullptr && (q ->infoC.NIK == NIK)){
             q  = q ->next ;
         }
-        return q ;
+        if (q->infoC.NIK == NIK ) {
+            return q ;
+        }else {
+            return nullptr ;
+        }
+
     }
 }
 void viewPegawai(adrPegawai Q){
     if (Q == nullptr){
         cout<<"Informasi kosong" ;
     } else {
-        cout << Q ->infoC->namaPegawai ;
-
-        cout << Q ->infoC->jabatanPegawai ;
-        cout << Q ->infoC->genderPegawai ;
-        cout << Q ->infoC->umurPegawai ;
-        cout << Q ->infoC->NIK ;
-
+        cout << "Nama: " << Q ->infoC.namaPegawai << endl ;
+        cout << "Jabatan: " << Q ->infoC.jabatanPegawai<<endl ;
+        cout << "Gender: " << Q ->infoC.genderPegawai << endl;
+        cout << "Umur: " << Q ->infoC.umurPegawai<<endl ;
+        cout << "NIK: " << Q ->infoC.NIK <<endl;
     }
 
 }
@@ -88,7 +88,7 @@ int hitungtotalpegawai(adrDivisi P){
         adrPegawai q ;
         int total = 0 ;
         q = P ->firstChild ;
-        while (q ->next == nullptr){
+        while (q != nullptr){
             total = total + 1 ;
             q = q ->next ;
         }
@@ -103,4 +103,17 @@ void divisiTerbanyak(listDivisi L){
         total = total + hitungtotalpegawai(P);
         P = P->next;
     }
+}
+
+int rataPerDivisi(adrDivisi P, listDivisi L){
+    int temp = 0 ;
+    int tempdiv = 0 ;
+    P = L.first;
+    while (P != nullptr){
+         temp = hitungtotalpegawai(P) + temp  ;
+         tempdiv = 1 + tempdiv ;
+         P = P ->next ;
+
+    }
+    return temp/tempdiv ;
 }

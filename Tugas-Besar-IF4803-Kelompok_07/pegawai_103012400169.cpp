@@ -10,7 +10,8 @@ adrPegawai createElmPegawai(string nama, string jabatan, string gender, int umur
     q ->infoC.jabatanPegawai = jabatan ;
     q ->infoC.genderPegawai = gender ;
     q ->infoC.umurPegawai = umur ;
-    q ->infoC.NIK =nik ;
+    q ->infoC.NIK =NIK ;
+    return q;
 }
 void insertFirstPegawai(adrDivisi &P, adrPegawai Q){
     if (P ->firstChild == nullptr ){
@@ -18,12 +19,12 @@ void insertFirstPegawai(adrDivisi &P, adrPegawai Q){
     }else {
         Q ->next = P ->firstChild ;
         Q ->prev = nullptr ;
-        p ->firstChild = Q ;
+        P ->firstChild = Q ;
     }
 }
 void insertAfterPegawai(adrPegawai Prec, adrPegawai Q){
     if (Prec == nullptr) {
-        cout << "list kosong"
+        cout << "list kosong" ;
     }
     if (Prec->next == nullptr) {
         Prec->next = Q;
@@ -37,12 +38,13 @@ void insertAfterPegawai(adrPegawai Prec, adrPegawai Q){
     }
 }
 void insertLastPegawai(adrDivisi &P, adrPegawai Q){
-    if (P->firstChild == NULL) {
+    adrPegawai R;
+    if (P->firstChild == nullptr) {
         P->firstChild = Q;
         Q->next = nullptr;
         Q->prev = nullptr;
     } else {
-        adrPegawai R = P->firstChild;
+        R = P->firstChild;
         while (R->next != nullptr) {
             R = R->next;
         }
@@ -51,5 +53,5 @@ void insertLastPegawai(adrDivisi &P, adrPegawai Q){
         Q->next = nullptr;
     }
 }
-}
+
 
