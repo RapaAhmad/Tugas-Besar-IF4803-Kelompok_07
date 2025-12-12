@@ -6,7 +6,7 @@ void deleteFirstDivisi(listDivisi &L, adrDivisi &P){
     if (L.first == nullptr){
         cout << "Tidak ada divisi" << endl;
         P = nullptr;
-    } else if (L.first->next = nullptr){
+    } else if (L.first->next == nullptr){
         P = L.first;
         L.first = nullptr;
     } else {
@@ -21,7 +21,7 @@ void deleteLastDivisi(listDivisi &L, adrDivisi &P){
     if (L.first == nullptr){
         cout << "Tidak ada divisi" << endl;
         P = nullptr;
-    } else if (L.first->next = nullptr){
+    } else if (L.first->next == nullptr){
         P = L.first;
         L.first = nullptr;
     } else {

@@ -77,10 +77,13 @@ void viewAll(listDivisi L){
     adrPegawai Q;
 
     P = L.first;
+    if (L.first == nullptr){
+        cout << "Belum ada divisi" << endl;
+    } else {
     while (P != nullptr){
         cout << "ID Divisi: " << P->infoP.idDivisi << endl;
-        cout << "Nama Divisi: " << P->infoP.idDivisi << endl;
-        cout << "Daftar Pegawai:\n ";
+        cout << "Nama Divisi: " << P->infoP.namaDivisi << endl;
+        cout << "Daftar Pegawai: " << endl;
         Q = P->firstChild;
         if (Q == nullptr){
             cout <<"Tidak ada pegawai" << endl;
@@ -94,5 +97,6 @@ void viewAll(listDivisi L){
         }
         cout << endl;
         P = P->next;
+        }
     }
 }

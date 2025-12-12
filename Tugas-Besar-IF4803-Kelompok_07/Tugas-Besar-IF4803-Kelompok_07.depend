@@ -1,24 +1,29 @@
 # depslib dependency file v1.0
-1765116076 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400169.cpp
+1765546337 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400169.cpp
 	<iostream>
 	"header.h"
 
-1765111338 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400384.cpp
+1765531691 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\divisi_103012400384.cpp
 	<iostream>
 	"header.h"
 
-1743445502 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main.cpp
-	<iostream>
-
-1763815441 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main_admin.cpp
-
-1763815466 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main_user.cpp
-
-1765116109 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400169.cpp
+1765545865 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main.cpp
 	<iostream>
 	"header.h"
 
-1765111340 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400384.cpp
+1765545954 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main_admin.cpp
+	"header.h"
+	<iostream>
+
+1765545960 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\main_user.cpp
+	<iostream>
+	"header.h"
+
+1765524463 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400169.cpp
+	<iostream>
+	"header.h"
+
+1765527545 source:d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai_103012400384.cpp
 	<iostream>
 	"header.h"
 
@@ -29,7 +34,6 @@
 1765107927 d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\pegawai.h
 	<string>
 
-1765116059 d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\header.h
+1765524094 d:\cpp\tugas besar\tugas-besar-if4803-kelompok_07\tugas-besar-if4803-kelompok_07\header.h
 	<iostream>
-	<string>
 
