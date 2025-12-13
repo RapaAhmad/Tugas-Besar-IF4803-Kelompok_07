@@ -58,16 +58,15 @@ adrPegawai searchPegawai(adrDivisi P,  string NIK){
         return nullptr ;
     } else {
         q = P ->firstChild ;
-        while (q ->next != nullptr && (q ->infoC.NIK == NIK)){
+        while (q != nullptr){
+            if (q->infoC.NIK == NIK){
+                return q;
+            }
             q  = q ->next ;
-        }
-        if (q->infoC.NIK == NIK ) {
-            return q ;
-        }else {
-            return nullptr ;
         }
 
     }
+    return nullptr;
 }
 void viewPegawai(adrPegawai Q){
     if (Q == nullptr){
@@ -106,14 +105,14 @@ void divisiTerbanyak(listDivisi L){
 }
 
 int rataPerDivisi(adrDivisi P, listDivisi L){
-    int temp = 0 ;
-    int tempdiv = 0 ;
+    int tempPeg = 0 ;
+    int tempDiv = 0 ;
     P = L.first;
     while (P != nullptr){
-         temp = hitungtotalpegawai(P) + temp  ;
-         tempdiv = 1 + tempdiv ;
+         tempPeg = hitungtotalpegawai(P) + tempPeg ;
+         tempDiv = 1 + tempDiv ;
          P = P ->next ;
 
     }
-    return temp/tempdiv ;
+    return tempPeg/tempDiv ;
 }
