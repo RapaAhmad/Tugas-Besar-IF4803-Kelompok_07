@@ -26,7 +26,7 @@ void insertFirstDivisi(listDivisi &L, adrDivisi P){
     }
 }
 void insertAfterDivisi(listDivisi &L, adrDivisi Prec, adrDivisi P){
-    if (Prec->next = nullptr){
+    if (Prec->next == nullptr){
         Prec->next = P;
     } else {
         P->next = Prec->next;
@@ -40,7 +40,7 @@ void insertLastDivisi(listDivisi &L, adrDivisi P){
         L.first = P;
     } else {
         Q = L.first;
-        while (Q != nullptr){
+        while (Q->next != nullptr){
             Q = Q->next;
         }
         Q->next = P;
@@ -65,7 +65,7 @@ void viewDivisi(listDivisi L){
 
     Q = L.first;
     while (Q != nullptr){
-        cout << "ID Divisi: " << Q->infoP.idDivisi << endl;
+        cout << "ID Divisi: " << Q->infoP.namaDivisi << endl;
         cout << "Nama Divisi: " << Q->infoP.idDivisi << endl;
         cout << endl;
         Q = Q->next;
@@ -78,15 +78,15 @@ void viewAll(listDivisi L){
 
     P = L.first;
     if (L.first == nullptr){
-        cout << "Belum ada divisi" << endl;
+        cout << "Divisi Kosong." << endl;
     } else {
     while (P != nullptr){
-        cout << "ID Divisi: " << P->infoP.idDivisi << endl;
+        cout << "\nID Divisi: " << P->infoP.idDivisi << endl;
         cout << "Nama Divisi: " << P->infoP.namaDivisi << endl;
         cout << "Daftar Pegawai: " << endl;
         Q = P->firstChild;
         if (Q == nullptr){
-            cout <<"Tidak ada pegawai" << endl;
+            cout <<"Tidak ada pegawai." << endl;
         } else {
             while (Q != nullptr){
                 cout << "Nama: " << Q->infoC.namaPegawai << endl;

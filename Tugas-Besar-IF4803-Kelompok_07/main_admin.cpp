@@ -37,8 +37,11 @@ void pilihanMenuDivisi(listDivisi &L) {
         } else if (pil == 5) {
             cout << "Masukkan ID yang dicari: "; cin >> id;
             P = searchDivisi(L, id);
-            if (P != nullptr) cout << "Ditemukan: " << P->infoP.namaDivisi << endl;
-            else cout << "Divisi tidak ditemukan." << endl;
+            if (P != nullptr) {
+                cout << "Ditemukan: " << P->infoP.namaDivisi << endl;
+            } else {
+                cout << "Divisi tidak ditemukan." << endl;
+            }
         }
     }
 }
