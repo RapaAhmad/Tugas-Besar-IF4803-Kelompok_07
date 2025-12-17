@@ -63,7 +63,7 @@ void viewPegawai(adrPegawai Q) ;
 //Komputing
 int hitungtotalpegawai(adrDivisi P);
 int rataPerDivisi(adrDivisi P, listDivisi L) ;
-void divisiTerbanyak(listDivisi L);
+
 
 //Menu
 void menuAdmin(listDivisi &L);

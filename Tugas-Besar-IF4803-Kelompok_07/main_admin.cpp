@@ -27,18 +27,30 @@ void pilihanMenuDivisi(listDivisi &L) {
             insertLastDivisi(L, P);
             cout << "Divisi berhasil ditambahkan!" << endl;
         } else if (pil == 2) {
+            if (L.first != nullptr){
+               cout << "Divisi Terlama dihapus." << endl;
+            }
             deleteFirstDivisi(L, P);
-            cout << "Divisi Terlama dihapus." << endl;
         } else if (pil == 3) {
+            if (L.first != nullptr){
+                cout << "Divisi Terbaru dihapus." << endl;
+            }
             deleteLastDivisi(L, P);
-            cout << "Divisi Terbaru dihapus." << endl;
+
         } else if (pil == 4) {
-            cout << "Masukkan ID yang dicari: "; cin >> id;
-            P = searchDivisi(L, id);
-            if (P != nullptr) {
-                cout << "Ditemukan: " << P->infoP.namaDivisi << endl;
-            } else {
-                cout << "Divisi tidak ditemukan." << endl;
+            if (L.first != nullptr ){
+
+                cout << "Masukkan ID yang dicari: ";
+                cin >> id;
+                P = searchDivisi(L, id);
+                if (P != nullptr) {
+                     cout << "Ditemukan: " << P->infoP.namaDivisi << endl;
+                } else if (P == nullptr){
+                    cout<<"Tidak ada Divisi dengan ID:  " << id <<endl ;
+                }
+
+            }else {
+                cout << "Divisi Kosong." << endl ;
             }
         }
     }
@@ -52,7 +64,8 @@ void pilihanMenuPegawai(listDivisi &L) {
     adrDivisi PDiv;
     adrPegawai Q, precPeg;
 
-    cout << "Masukkan ID Divisi tempat Pegawai berada: "; cin >> idDiv;
+    cout << "Masukkan ID Divisi tempat Pegawai berada: ";
+    cin >> idDiv;
     PDiv = searchDivisi(L, idDiv);
 
     if (PDiv == nullptr) {
@@ -85,11 +98,16 @@ void pilihanMenuPegawai(listDivisi &L) {
             insertLastPegawai(PDiv, Q);
             cout << "Pegawai berhasil ditambahkan." << endl;
         } else if (pil == 2) {
+            if (PDiv->firstChild != nullptr){
+               cout << "Pegawai pertama dihapus." << endl;
+            }
             deleteFirstPegawai(PDiv, Q);
-            cout << "Pegawai pertama dihapus." << endl;
+
         } else if (pil == 3) {
+            if (PDiv->firstChild != nullptr){
+               cout << "Pegawai terakhir dihapus." << endl;
+            }
             deleteLastPegawai(PDiv, Q);
-            cout << "Pegawai terakhir dihapus." << endl;
         }
     }
 }
@@ -109,7 +127,13 @@ void menuAdmin(listDivisi &L) {
                 pilihanMenuDivisi(L);
                 break;
             case 2:
-                pilihanMenuPegawai(L);
+                if (L.first == nullptr) {
+                    cout<<"Tidak ada Divisi."<<endl ;
+                }else {
+                    pilihanMenuPegawai(L);
+                }
+
+
                 break;
             case 3:
                 viewAll(L);

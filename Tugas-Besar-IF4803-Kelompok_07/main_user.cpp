@@ -11,7 +11,7 @@ void menuUser(listDivisi L) {
     adrPegawai Q;
 
     while (pilihan != 0) {
-        cout << "\n======= MENU PEGAWAI =======" << endl;
+        cout << "\n======= MENU USER =======" << endl;
         cout << "1. Tampilkan Seluruh Divisi Perusahaan" << endl;
         cout << "2. Tampilkan Seluruh Data Perusahaan" << endl;
         cout << "3. Tampilkan Data Per Divisi Tertentu" << endl;
@@ -30,14 +30,18 @@ void menuUser(listDivisi L) {
                 viewAll(L);
                 break;
             case 3:
-                cout << "Masukkan ID Divisi: ";
+                if (L.first == nullptr){
+                    cout<< "Tidak ada Divisi. "<< endl ;
+                }else {
+                    cout << "Masukkan ID Divisi: ";
                 cin >> idDiv;
+
                 P = searchDivisi(L, idDiv);
                 if (P != nullptr) {
                     cout << "\nDivisi: " << P->infoP.namaDivisi << endl;
 
                     Q = P->firstChild;
-                    if (Q == nullptr) {
+                    if (Q == nullptr ) {
                         cout << "Tidak ada pegawai." << endl;
                     } else {
                         cout << "\nDaftar Pegawai: " << endl;
@@ -50,11 +54,13 @@ void menuUser(listDivisi L) {
                 } else {
                     cout << "Divisi tidak ditemukan." << endl;
                 }
+                }
+
                 break;
             case 4:
-
                 {
-                    cout << "Masukkan NIK: ";
+                    if (L.first != nullptr){
+                        cout << "Masukkan NIK: ";
                     cin >> nik;
                     bool found = false;
                     P = L.first;
@@ -71,18 +77,31 @@ void menuUser(listDivisi L) {
                     if (!found) {
                        cout << "\nPegawai dengan NIK tersebut tidak ditemukan." << endl;
                     }
+                    } else {
+                        cout << "Tidak ada Pegawai." << endl;
+                    }
+
                 }
                 break;
             case 5:
+                if (L.first == nullptr){
+                    cout<<"Tidak ada Divisi."<<endl ;
+                } else {
                 cout << "Masukkan ID Divisi untuk hitung total: ";
                 cin >> idDiv;
                 P = searchDivisi(L, idDiv);
                 if (P != nullptr) {
                     int total = hitungtotalpegawai(P);
+                    if (total == 0 ) {
+                        cout<<"Tidak ada Pegawai."<<endl ;
+                    }else{
                     cout << "Total Pegawai di " << P->infoP.namaDivisi << ": " << total << endl;
+                    }
                 } else {
                     cout << "Divisi tidak ditemukan." << endl;
                 }
+                }
+
                 break;
             case 6:
                 if (L.first == nullptr){

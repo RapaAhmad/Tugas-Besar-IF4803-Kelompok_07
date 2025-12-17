@@ -87,6 +87,8 @@ void viewAll(listDivisi L){
     } else {
     while (P != nullptr){
         cout << "\nID Divisi: " << P->infoP.idDivisi << endl;
+        cout <<"======================"<< endl ;
+
         cout << "Nama Divisi: " << P->infoP.namaDivisi << endl;
         cout << "Daftar Pegawai: " << endl;
         Q = P->firstChild;
@@ -94,9 +96,13 @@ void viewAll(listDivisi L){
             cout <<"Tidak ada pegawai." << endl;
         } else {
             while (Q != nullptr){
-                cout << "Nama: " << Q->infoC.namaPegawai << endl;
-                cout << "Jabatan: " << Q->infoC.jabatanPegawai << endl;
-                Q = Q->next;
+            cout << "Nama: " << Q ->infoC.namaPegawai << endl ;
+            cout << "Gender: " << Q ->infoC.genderPegawai << endl;
+            cout << "Umur: " << Q ->infoC.umurPegawai<<endl ;
+            cout << "NIK: " << Q ->infoC.NIK <<endl;
+            cout << "Jabatan: " << Q ->infoC.jabatanPegawai<<endl ;
+            cout << "---------------" << endl ;
+            Q = Q->next;
             }
             cout << endl;
         }

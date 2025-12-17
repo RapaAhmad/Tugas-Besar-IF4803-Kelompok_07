@@ -49,11 +49,11 @@ int main() {
         insertLastPegawai(P, Q);
 
     while (pilihanUtama != 0) {
-        cout << "\n=============================================" << endl;
-        cout << " SISTEM MANAJEMEN PEGAWAI PERUSAHAAN PT. FuFa " << endl;
-        cout << "=============================================" << endl;
-        cout << "1. Login sebagai ATMIN " << endl;
-        cout << "2. Login sebagai PEGAWAI " << endl;
+        cout << "\n==============================================================" << endl;
+        cout << " SISTEM MANAJEMEN PEGAWAI PERUSAHAAN PT. Makmur Jaya Althajir " << endl;
+        cout << "==============================================================" << endl;
+        cout << "1. Login sebagai ADMIN " << endl;
+        cout << "2. Login sebagai USER " << endl;
         cout << "0. Keluar Aplikasi" << endl;
         cout << "Pilihan Anda: ";
         cin >> pilihanUtama;
