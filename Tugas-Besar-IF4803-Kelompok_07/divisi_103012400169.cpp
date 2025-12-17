@@ -64,13 +64,18 @@ void viewDivisi(listDivisi L){
     adrDivisi Q;
 
     Q = L.first;
-    while (Q != nullptr){
-        cout << "ID Divisi: " << Q->infoP.namaDivisi << endl;
-        cout << "Nama Divisi: " << Q->infoP.idDivisi << endl;
+    if (L.first == nullptr){
+        cout << "\nDivisi Kosong." << endl;
+    } else {
+        while (Q != nullptr){
+        cout << "\nID Divisi: " << Q->infoP.idDivisi << endl;
+        cout << "Nama Divisi: " << Q->infoP.namaDivisi << endl;
         cout << endl;
         Q = Q->next;
+        }
     }
 }
+
 
 void viewAll(listDivisi L){
     adrDivisi P;
@@ -78,7 +83,7 @@ void viewAll(listDivisi L){
 
     P = L.first;
     if (L.first == nullptr){
-        cout << "Divisi Kosong." << endl;
+        cout << "\nDivisi Kosong." << endl;
     } else {
     while (P != nullptr){
         cout << "\nID Divisi: " << P->infoP.idDivisi << endl;

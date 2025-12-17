@@ -12,20 +12,24 @@ void menuUser(listDivisi L) {
 
     while (pilihan != 0) {
         cout << "\n======= MENU PEGAWAI =======" << endl;
-        cout << "1. Tampilkan Seluruh Data Perusahaan" << endl;
-        cout << "2. Tampilkan Data Per Divisi Tertentu" << endl;
-        cout << "3. Cari Pegawai berdasarkan NIK" << endl;
-        cout << "4. Total Pegawai dalam Suatu Divisi" << endl;
-        cout << "5. Rata-rata Pegawai per Divisi" << endl;
+        cout << "1. Tampilkan Seluruh Divisi Perusahaan" << endl;
+        cout << "2. Tampilkan Seluruh Data Perusahaan" << endl;
+        cout << "3. Tampilkan Data Per Divisi Tertentu" << endl;
+        cout << "4. Cari Pegawai berdasarkan NIK" << endl;
+        cout << "5. Total Pegawai dalam Suatu Divisi" << endl;
+        cout << "6. Rata-rata Pegawai per Divisi" << endl;
         cout << "0. Logout / Kembali" << endl;
         cout << "Pilih: ";
         cin >> pilihan;
 
         switch(pilihan) {
             case 1:
-                viewAll(L);
+                viewDivisi(L);
                 break;
             case 2:
+                viewAll(L);
+                break;
+            case 3:
                 cout << "Masukkan ID Divisi: ";
                 cin >> idDiv;
                 P = searchDivisi(L, idDiv);
@@ -47,7 +51,7 @@ void menuUser(listDivisi L) {
                     cout << "Divisi tidak ditemukan." << endl;
                 }
                 break;
-            case 3:
+            case 4:
 
                 {
                     cout << "Masukkan NIK: ";
@@ -57,7 +61,7 @@ void menuUser(listDivisi L) {
                     while (P != nullptr && !found) {
                         Q = searchPegawai(P, nik);
                         if (Q != nullptr) {
-                            cout << "Ditemukan di Divisi " << P->infoP.namaDivisi << endl;
+                            cout << "\nDitemukan di Divisi " << P->infoP.namaDivisi << endl;
                             viewPegawai(Q);
                             cout << endl;
                             found = true;
@@ -65,11 +69,11 @@ void menuUser(listDivisi L) {
                         P = P->next;
                     }
                     if (!found) {
-                       cout << "Pegawai dengan NIK tersebut tidak ditemukan." << endl;
+                       cout << "\nPegawai dengan NIK tersebut tidak ditemukan." << endl;
                     }
                 }
                 break;
-            case 4:
+            case 5:
                 cout << "Masukkan ID Divisi untuk hitung total: ";
                 cin >> idDiv;
                 P = searchDivisi(L, idDiv);
@@ -80,7 +84,7 @@ void menuUser(listDivisi L) {
                     cout << "Divisi tidak ditemukan." << endl;
                 }
                 break;
-            case 5:
+            case 6:
                 if (L.first == nullptr){
                     cout << ("Belum ada Divisi.") << endl;
                 } else {
