@@ -4,9 +4,9 @@ using namespace std;
 
 void deleteFirstDivisi(listDivisi &L, adrDivisi &P){
     if (L.first == nullptr){
-        cout << "Tidak ada divisi" << endl;
+        cout << "Tidak ada divisi." << endl;
         P = nullptr;
-    } else if (L.first->next = nullptr){
+    } else if (L.first->next == nullptr){
         P = L.first;
         L.first = nullptr;
     } else {
@@ -19,9 +19,9 @@ void deleteLastDivisi(listDivisi &L, adrDivisi &P){
     adrDivisi Q;
 
     if (L.first == nullptr){
-        cout << "Tidak ada divisi" << endl;
+        cout << "Tidak ada divisi." << endl;
         P = nullptr;
-    } else if (L.first->next = nullptr){
+    } else if (L.first->next == nullptr){
         P = L.first;
         L.first = nullptr;
     } else {
@@ -35,7 +35,7 @@ void deleteLastDivisi(listDivisi &L, adrDivisi &P){
 }
 void deleteAfterDivisi(listDivisi &L, adrDivisi Prec, adrDivisi &P){
     if (L.first == nullptr || Prec->next == nullptr){
-        cout << "Tidak ada divisi" << endl;
+        cout << "Tidak ada divisi." << endl;
         P = nullptr;
     } else if (Prec->next->next == nullptr){
         P = Prec->next;

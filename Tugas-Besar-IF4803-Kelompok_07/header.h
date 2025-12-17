@@ -2,7 +2,7 @@
 #define HEADER_H_INCLUDED
 
 #include <iostream>
-#include <string>
+
 using namespace std;
 
 typedef struct elmDivisi *adrDivisi;
@@ -57,12 +57,20 @@ void insertLastPegawai(adrDivisi &P, adrPegawai Q);
 void deleteFirstPegawai(adrDivisi &P, adrPegawai &Q);
 void deleteLastPegawai(adrDivisi &P, adrPegawai &Q);
 void deleteAfterPegawai(adrPegawai Prec, adrPegawai &Q);
-adrPegawai searchPegawai(adrDivisi P, string nama, string NIK);
-void viewPegawai(adrPegawai Q);
+adrPegawai searchPegawai(adrDivisi P, string NIK);
+void viewPegawai(adrPegawai Q) ;
 
 //Komputing
 int hitungtotalpegawai(adrDivisi P);
-void divisiTerbanyak(listDivisi L);
+int rataPerDivisi(adrDivisi P, listDivisi L) ;
 
+
+//Menu
+void menuAdmin(listDivisi &L);
+void menuUser(listDivisi L);
+void pilihanMenuDivisi(listDivisi &L);
+void pilihanMenuPegawai(listDivisi &L);
 
 #endif // HEADER_H_INCLUDED
+
+
