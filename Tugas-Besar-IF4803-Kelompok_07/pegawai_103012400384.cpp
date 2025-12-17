@@ -110,15 +110,3 @@ int rataPerDivisi(adrDivisi P, listDivisi L){
     return tempPeg/tempDiv ;
 }
 
-int rataPerDivisi(adrDivisi P, listDivisi L){
-    int tempPeg = 0 ;
-    int tempDiv = 0 ;
-    P = L.first;
-    while (P != nullptr){
-         tempPeg = hitungtotalpegawai(P) + tempPeg ;
-         tempDiv = 1 + tempDiv ;
-         P = P ->next ;
-
-    }
-    return tempPeg/tempDiv ;
-}

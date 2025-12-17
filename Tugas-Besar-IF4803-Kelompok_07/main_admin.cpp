@@ -115,7 +115,7 @@ void pilihanMenuPegawai(listDivisi &L) {
 void menuAdmin(listDivisi &L) {
     int pilihan = -1;
     while (pilihan != 0) {
-        cout << "\n======= MENU ATMIN =======" << endl;
+        cout << "\n======= MENU ADMIN =======" << endl;
         cout << "1. Kelola Data Divisi" << endl;
         cout << "2. Kelola Data Pegawai" << endl;
         cout << "3. Lihat Semua Data" << endl;
@@ -139,7 +139,7 @@ void menuAdmin(listDivisi &L) {
                 viewAll(L);
                 break;
             case 0:
-                cout << "Keluar dari mode Atmin" << endl;
+                cout << "Keluar dari mode Admin" << endl;
                 break;
             default:
                 cout << "Pilihan salah." << endl;
