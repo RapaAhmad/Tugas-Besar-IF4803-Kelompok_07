@@ -12,9 +12,9 @@ int main() {
     createListDivisi(L);
 
     P = createElmDivisi("IT", "001");
-    insertFirstDivisi(L, P);
+    insertLastDivisi(L, P);
 
-        Q = createElmPegawai("Budi_Setiawan", "Project_Manajer", "L", 25, "1001");
+        Q = createElmPegawai("Budi_Setiawan", "Project_Manager", "L", 25, "1001");
         insertLastPegawai(P, Q);
 
         Q = createElmPegawai("Usep_Jalaludin", "Frontend_Dev", "L", 27, "1002");
@@ -23,17 +23,24 @@ int main() {
         Q = createElmPegawai("Verrel_Bray", "Backend_Dev", "L", 27, "1003");
         insertLastPegawai(P, Q);
 
-        Q = createElmPegawai("Citra_Kirana", "UI/UX", "P", 24, "1004");
+        Q = createElmPegawai("Ailsa_Nur", "UI/UX", "P", 24, "1004");
         insertLastPegawai(P, Q);
 
     P = createElmDivisi("Keuangan", "002");
-    insertFirstDivisi(L, P);
+    insertLastDivisi(L, P);
 
-        Q = createElmPegawai("Citra_Kirana", "Akuntan", "P", 30, "2001");
+        Q = createElmPegawai("Citra_Kirana", "Manager", "P", 30, "2001");
         insertLastPegawai(P, Q);
 
+        Q = createElmPegawai("Karin_Sukma", "Analyst", "P", 25, "2002");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Emi_Lia", "Akuntan", "P", 29, "2003");
+        insertLastPegawai(P, Q);
+
+
     P = createElmDivisi("HR", "003");
-    insertFirstDivisi(L, P);
+    insertLastDivisi(L, P);
 
         Q = createElmPegawai("Eko_Patriot", "Recruiter", "L", 29, "3001");
         insertLastPegawai(P, Q);

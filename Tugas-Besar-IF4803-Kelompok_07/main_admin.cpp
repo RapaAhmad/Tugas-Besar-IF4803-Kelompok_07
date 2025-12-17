@@ -10,31 +10,29 @@ void pilihanMenuDivisi(listDivisi &L) {
 
     while (pil != 0) {
         cout << "\n=== KELOLA DIVISI ===" << endl;
-        cout << "1. Insert First Divisi" << endl;
-        cout << "2. Insert Last Divisi" << endl;
-        cout << "3. Delete First Divisi" << endl;
-        cout << "4. Delete Last Divisi" << endl;
-        cout << "5. Cari Divisi" << endl;
+        cout << "1. Tambah Divisi" << endl;
+        cout << "2. Hapus Divisi Terlama" << endl;
+        cout << "3. Hapus Divisi Terbaru" << endl;
+        cout << "4. Cari Divisi" << endl;
         cout << "0. Kembali" << endl;
         cout << "Pilih: ";
         cin >> pil;
 
-        if (pil == 1 || pil == 2) {
+        if (pil == 1) {
             cout << "Masukkan ID Divisi: ";
             cin >> id;
             cout << "Masukkan Nama Divisi: ";
             cin>>nama ;
             P = createElmDivisi(nama, id);
-            if (pil == 1) insertFirstDivisi(L, P);
-            else insertLastDivisi(L, P);
+            insertLastDivisi(L, P);
             cout << "Divisi berhasil ditambahkan!" << endl;
-        } else if (pil == 3) {
+        } else if (pil == 2) {
             deleteFirstDivisi(L, P);
-            cout << "Divisi pertama dihapus." << endl;
-        } else if (pil == 4) {
+            cout << "Divisi Terlama dihapus." << endl;
+        } else if (pil == 3) {
             deleteLastDivisi(L, P);
-            cout << "Divisi terakhir dihapus." << endl;
-        } else if (pil == 5) {
+            cout << "Divisi Terbaru dihapus." << endl;
+        } else if (pil == 4) {
             cout << "Masukkan ID yang dicari: "; cin >> id;
             P = searchDivisi(L, id);
             if (P != nullptr) {
