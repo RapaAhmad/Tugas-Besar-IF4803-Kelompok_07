@@ -21,6 +21,13 @@ void pilihanMenuDivisi(listDivisi &L) {
         if (pil == 1) {
             cout << "Masukkan ID Divisi: ";
             cin >> id;
+            P = searchDivisi(L,id);
+            while (P!=nullptr){
+                cout << "ID sudah ada. Silahkan masukkan ID yang lain." << endl;
+                cout << "Masukkan ID Divisi: ";
+                cin >> id;
+                P = searchDivisi(L,id);
+            }
             cout << "Masukkan Nama Divisi: ";
             cin>>nama ;
             P = createElmDivisi(nama, id);
@@ -93,7 +100,22 @@ void pilihanMenuPegawai(listDivisi &L) {
             cin >> umur;
             cout << "NIK: ";
             cin >> nik;
-
+            Q = searchPegawai(PDiv, nik);
+            while (Q != nullptr){
+                cout << "Data yang dimasukkan tidak valid, karena NIK sudah ada.\n" << endl;
+                cout << "Silahkan masukkan data kembali: " << endl;
+                cout << "Nama: ";
+                cin>> nama ;
+                cout << "Jabatan: ";
+                cin >> jab ;
+                cout << "Gender (L/P): ";
+                cin >> gen;
+                cout << "Umur: ";
+                cin >> umur;
+                cout << "NIK: ";
+                cin >> nik;
+                Q = searchPegawai(PDiv, nik);
+            }
             Q = createElmPegawai(nama, jab, gen, umur, nik);
             insertLastPegawai(PDiv, Q);
             cout << "Pegawai berhasil ditambahkan." << endl;

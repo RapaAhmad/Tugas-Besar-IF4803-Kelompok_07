@@ -9,7 +9,44 @@ void menuUser(listDivisi L) {
     string idDiv, nik;
     adrDivisi P;
     adrPegawai Q;
+/*
+    P = createElmDivisi("IT", "001");
+    insertLastDivisi(L, P);
 
+        Q = createElmPegawai("Budi_Setiawan", "Project_Manager", "L", 25, "1001");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Usep_Jalaludin", "Frontend_Dev", "L", 27, "1002");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Verrel_Bray", "Backend_Dev", "L", 27, "1003");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Ailsa_Nur", "UI/UX", "P", 24, "1004");
+        insertLastPegawai(P, Q);
+
+    P = createElmDivisi("Keuangan", "002");
+    insertLastDivisi(L, P);
+
+        Q = createElmPegawai("Citra_Kirana", "Manager", "P", 30, "2001");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Karin_Sukma", "Analyst", "P", 25, "2002");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Emi_Lia", "Akuntan", "P", 29, "2003");
+        insertLastPegawai(P, Q);
+
+
+    P = createElmDivisi("HR", "003");
+    insertLastDivisi(L, P);
+
+        Q = createElmPegawai("Eko_Patriot", "Recruiter", "L", 29, "3001");
+        insertLastPegawai(P, Q);
+
+        Q = createElmPegawai("Surya_Sekunder", "Manager", "L", 35, "3002");
+        insertLastPegawai(P, Q);
+*/
     while (pilihan != 0) {
         cout << "\n======= MENU USER =======" << endl;
         cout << "1. Tampilkan Seluruh Divisi Perusahaan" << endl;

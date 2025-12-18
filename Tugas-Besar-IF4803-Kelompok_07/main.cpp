@@ -11,7 +11,7 @@ int main() {
 
     createListDivisi(L);
 
-    P = createElmDivisi("IT", "001");
+    /*P = createElmDivisi("IT", "001");
     insertLastDivisi(L, P);
 
         Q = createElmPegawai("Budi_Setiawan", "Project_Manager", "L", 25, "1001");
@@ -45,8 +45,8 @@ int main() {
         Q = createElmPegawai("Eko_Patriot", "Recruiter", "L", 29, "3001");
         insertLastPegawai(P, Q);
 
-        Q = createElmPegawai("Surya_Sekunder", "Manager", "P", 35, "3002");
-        insertLastPegawai(P, Q);
+        Q = createElmPegawai("Surya_Sekunder", "Manager", "L", 35, "3002");
+        insertLastPegawai(P, Q);*/
 
     while (pilihanUtama != 0) {
         cout << "\n==============================================================" << endl;
