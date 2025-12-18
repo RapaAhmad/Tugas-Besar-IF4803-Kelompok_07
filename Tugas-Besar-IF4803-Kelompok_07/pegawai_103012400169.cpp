@@ -24,7 +24,7 @@ void insertFirstPegawai(adrDivisi &P, adrPegawai Q){
 }
 void insertAfterPegawai(adrPegawai Prec, adrPegawai Q){
     if (Prec == nullptr) {
-        cout << "list kosong" ;
+        cout << "Divisi Kosong." ;
     }
     if (Prec->next == nullptr) {
         Prec->next = Q;
